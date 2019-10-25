@@ -30,6 +30,11 @@ struct node* free_list(struct node* list) {
 struct node* remove_value(struct node* list, int target) {
   struct node* current = list;
   if (current == NULL) return list;
+  if (current->data == target) {
+    list = list->next;
+    free(current);
+    return list;
+  }
   while (current->next != NULL) {
     if (current->next->data == target) {
       struct node* toFree = current->next;
