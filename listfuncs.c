@@ -32,7 +32,7 @@ struct node* remove_value(struct node* list, int target) {
   if (current == NULL) return list;
   while (current->next != NULL) {
     if (current->next->data == target) {
-      toFree = current->next;
+      struct node* toFree = current->next;
       current->next = toFree->next;
       free(toFree);
       return list;
