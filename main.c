@@ -15,5 +15,9 @@ int main() {
 
   print_list(list);
 
+  printf("Removing first instance of 4...\n");
+  remove_value(list, 4);
+  print_list(list);
+
   return 0;
 }
