@@ -11,4 +11,4 @@ struct node* insert_front(struct node* list, int value);
 struct node* free_list(struct node* list);
 struct node* remove_value(struct node* list, int value);
 
-#enddef
+#endif
