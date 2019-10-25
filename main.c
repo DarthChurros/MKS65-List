@@ -18,6 +18,12 @@ int main() {
   printf("Removing first instance of 4...\n");
   remove_value(list, 4);
   print_list(list);
+  printf("Removing first instance of 0...\n");
+  remove_value(list, 0);
+  print_list(list);
+  printf("Removing first instance of 9...\n");
+  remove_value(list, 9);
+  print_list(list);
 
   return 0;
 }
