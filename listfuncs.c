@@ -27,7 +27,7 @@ struct node* free_list(struct node* list) {
   return NULL;
 }
 
-struct node* remove_value(struct node* list, int target) {
+struct node* remove_node(struct node* list, int target) {
   struct node* current = list;
   if (current == NULL) return list;
   if (current->data == target) {
