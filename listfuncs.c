@@ -24,7 +24,10 @@ struct node* insert_front(struct node* list, int val) {
 }
 
 struct node* free_list(struct node* list) {
-  return NULL;
+  while (list != NULL) {
+    list = remove_node(list->data);
+  }
+  return list;
 }
 
 struct node* remove_node(struct node* list, int target) {
