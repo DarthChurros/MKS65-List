@@ -12,10 +12,9 @@ int main() {
   for (i = 0; i < 10; i++) {
     list = insert_front(list, i);
   }
-
   print_list(list);
 
-  printf("Removing first instance of 4...\n");
+  printf("\nRemoving first instance of 4...\n");
   list = remove_node(list, 4);
   print_list(list);
   printf("Removing first instance of 0...\n");
@@ -25,12 +24,16 @@ int main() {
   list = remove_node(list, 9);
   print_list(list);
 
-  printf("Clearing list...\n");
+  printf("Removing first instance of -1\n");
+  list = remove_node(list, -1);
+  print_list(list);
+
+  printf("\nClearing list...\n");
   list = free_list(list);
   printf("List now points to %p\nList contents: ", list);
   print_list(list);
 
-  printf("Adding one million elements to list...\n");
+  printf("\nAdding one million elements to list...\n");
   for (i = 0; i < 1E6; i++) {
     list = insert_front(list, i);
   }
