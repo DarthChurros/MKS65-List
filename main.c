@@ -25,5 +25,9 @@ int main() {
   list = remove_node(list, 9);
   print_list(list);
 
+  printf("Clearing list...\n");
+  list = free_list(list);
+  printf("List now points to %p\nList contents: ", list);
+  print_list(list);
   return 0;
 }
