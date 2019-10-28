@@ -29,5 +29,13 @@ int main() {
   list = free_list(list);
   printf("List now points to %p\nList contents: ", list);
   print_list(list);
+
+  printf("Adding one million elements to list...\n");
+  for (i = 0; i < 1E6; i++) {
+    list = insert_front(list, i);
+  }
+  printf("Clearing list located at %p...\n", list);
+  list = free_list(list);
+
   return 0;
 }
